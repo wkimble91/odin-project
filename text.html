@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Functions: Task 1</title>
+    <style>
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+</body>
+<script>
+    let fizzBuzz=() => {
+        let userNum=parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "))
+        for (i=1; i<=userNum; i++) {
+            if (i%15===0) {
+                console.log("FizzBuzz")
+            } else if (i%5===0) {
+                console.log("Buzz")
+            } else if (i%3===0) {
+                console.log("Fizz")
+            } else {
+                console.log(i)
+            }
+        }
+    }
+
+    let thirdHeighest=(arr) => {
+        let arrayOfNums=[]
+        for (i=0; i<10; i++) {
+            arrayOfNums[i]=Math.floor(Math.random()*100)
+        }
+        console.log("Unsorted: "+arrayOfNums)
+        arrayOfNums.sort(function (a, b) {
+            return b-a
+        })
+        console.log("Sorted: "+arrayOfNums)
+        console.log("Third Highest: "+parseInt(arrayOfNums.slice(2, 3)))
+    }
+
+    let sum=() => {
+        let intX=parseInt(prompt("X: "))
+        let intY=parseInt(prompt("Y: "))
+        let sum=intX+intY
+        console.log("Answer is: "+sum)
+    }
+</script>
+
+</html>
