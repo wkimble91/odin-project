@@ -14,14 +14,14 @@ let playRound = (player, computer) => {
     console.log(
       'Player: ' + player + ' Computer: ' + computer + '. Computer Wins!'
     );
-    return 1;
+    return 'computerScored';
   } else if (
     (computer == 'Rock' && player == 'Paper') ||
     (computer == 'Scissors' && player == 'Rock') ||
     (computer == 'Paper' && player == 'Scissors')
   ) {
     console.log('Player: ' + player + ' Computer: ' + computer + '. You Win!');
-    return 2;
+    return 'playerScored';
   }
 };
 
@@ -36,9 +36,9 @@ let game = () => {
       playerInitSelection.toLowerCase().slice(1);
     const computerSelection = getComputerChoice();
     round = playRound(playerSelection, computerSelection);
-    if (round == 1) {
+    if (round == 'computerScored') {
       computerScore++;
-    } else if (round == 2) {
+    } else if (round == 'playerScored') {
       playerScore++;
     }
   }
