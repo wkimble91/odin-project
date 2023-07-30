@@ -12,13 +12,16 @@
         THE TITLE OF YOUR WEBPAGE
     </h1>
     <div id="container">
-        <div class="content">
-            This is the glorious text-content!
-        </div>
     </div>
 
     <script>
         const container=document.querySelector('#container');
+
+        const content=document.createElement('div');
+        content.classList.add('content');
+        content.textContent='This is the glorious text-content!';
+
+        container.appendChild(content);
         // a <p> with red text that says “Hey I’m red!”
         const redParagraph=document.createElement("p")
         redParagraph.textContent="Hey I'm red!"
