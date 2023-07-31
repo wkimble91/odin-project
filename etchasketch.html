@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+</head>
+
+<body>
+    <button class='resetBtn'>Reset Me!</button>
+    <div class='container'>
+    </div>
+
+    <script src='./etchasketch.js'></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .resetBtn {
+            cursor: pointer;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 5vh auto;
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .gridRow {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
+        }
+
+        .gridItem {
+            box-sizing: border-box;
+            flex: 1;
+            height: 100%;
+            border: 1px solid black;
+        }
+    </style>
+</body>
+
+</html>
