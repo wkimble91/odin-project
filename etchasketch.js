@@ -2,20 +2,20 @@ const container = document.querySelector('.container');
 const resetBtn = document.querySelector('.resetBtn');
 
 function changeColor(e) {
-    const r = Math.floor(Math.random() * 256)
-    const g = Math.floor(Math.random() * 256)
-    const b = Math.floor(Math.random() * 256)
-    e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
 
 // Create initial 16x16 grid
 // Makes the rows
-for (i=0; i<16; i++) {
+for (i = 0; i < 16; i++) {
   const gridRow = document.createElement('div');
   gridRow.classList.add('gridRow');
 
   // And makes the columns
-  for (j=0; j<16; j++) {
+  for (j = 0; j < 16; j++) {
     const gridItem = document.createElement('div');
     gridItem.classList.add('gridItem');
     gridItem.addEventListener('mouseover', changeColor);
@@ -34,17 +34,17 @@ resetBtn.addEventListener('click', function () {
 
   // Makes new grid based on user input
   // Makes the rows
-  for (i=0; i<size; i++) {
-  const gridRow = document.createElement('div');
-  gridRow.classList.add('gridRow');
+  for (i = 0; i < size; i++) {
+    const gridRow = document.createElement('div');
+    gridRow.classList.add('gridRow');
 
-  // And makes the columns
-  for (j=0; j<size; j++) {
-    const gridItem = document.createElement('div');
-    gridItem.classList.add('gridItem');
-    gridItem.addEventListener('mouseover', changeColor);
-    gridRow.appendChild(gridItem);
-  }
-  container.appendChild(gridRow);
+    // And makes the columns
+    for (j = 0; j < size; j++) {
+      const gridItem = document.createElement('div');
+      gridItem.classList.add('gridItem');
+      gridItem.addEventListener('mouseover', changeColor);
+      gridRow.appendChild(gridItem);
+    }
+    container.appendChild(gridRow);
   }
 });
