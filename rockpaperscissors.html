@@ -4,21 +4,58 @@
 <head>
     <meta charset="utf-8" />
     <title>Rock Paper Scissors</title>
+
 </head>
 
 <body>
     <h1>Let's Play Rock Paper Scissors!</h1>
-    <h2>Best of 5!</h2>
+    <p>Best of 5!</p>
     <div id='btnContainer'>
         <button class="btn" id='Rock'>Rock</button>
         <button class="btn" id='Paper'>Paper</button>
         <button class="btn" id='Scissors'>Scissors</button>
     </div>
     <div id='scoreContainer'>
-        <h3 class='winner'></h3>
+        <p class='winner'></p>
+        <p class='result'></p>
         <p class='score'></p>
     </div>
 </body>
 <script src='./rockpaperscissors.js'></script>
+<style>
+    body {
+        background-color: antiquewhite;
+        color: darkmagenta;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    button {
+        cursor: pointer;
+        background-color: coral;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        margin: 0 10px 30px;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+
+    }
+
+
+    .winner {
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    .result {}
+
+    .score {}
+</style>
 
 </html>

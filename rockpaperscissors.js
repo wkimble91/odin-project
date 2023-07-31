@@ -1,4 +1,5 @@
 const buttons = document.querySelectorAll('.btn');
+const currResult = document.querySelector('.result');
 const currWinner = document.querySelector('.winner');
 const currScore = document.querySelector('.score');
 let playerScore = 0;
@@ -17,23 +18,26 @@ let getComputerChoice = () => {
 
 let playRound = (player, computer) => {
   if (player == computer) {
-    currWinner.textContent =
-      'Player: ' + player + ', Computer: ' + computer + '. TIE!';
+    currResult.textContent =
+      'Player: ' + player + ', Computer: ' + computer + '.';
+    currWinner.textContent = 'TIE!';
   } else if (
     (player == 'Rock' && computer == 'Paper') ||
     (player == 'Scissors' && computer == 'Rock') ||
     (player == 'Paper' && computer == 'Scissors')
   ) {
-    currWinner.textContent =
-      'Player: ' + player + ', Computer: ' + computer + '. Computer Wins!';
+    currResult.textContent =
+      'Player: ' + player + ', Computer: ' + computer + '.';
+    currWinner.textContent = 'Computer Scores!';
     return 'computerScored';
   } else if (
     (computer == 'Rock' && player == 'Paper') ||
     (computer == 'Scissors' && player == 'Rock') ||
     (computer == 'Paper' && player == 'Scissors')
   ) {
-    currWinner.textContent =
-      'Player: ' + player + ', Computer: ' + computer + '. You Win!';
+    currResult.textContent =
+      'Player: ' + player + ', Computer: ' + computer + '.';
+    currWinner.textContent = 'You Score!';
     return 'playerScored';
   }
 };
@@ -49,13 +53,13 @@ let game = (playerSelection) => {
   }
 
   if (playerScore >= 5) {
-    currWinner.textContent =
-      'You Win! Player: ' + playerScore + ', Computer: ' + computerScore + '.';
+    currWinner.textContent = 'You Win The Game! ';
+    currResult.textContent = '';
     playerScore = 0;
     computerScore = 0;
   } else if (computerScore >= 5) {
-    currWinner.textContent =
-      'You Lose! Player: ' + playerScore + ', Computer: ' + computerScore + '.';
+    currWinner.textContent = 'You Lose! ';
+    currResult.textContent = '';
     playerScore = 0;
     computerScore = 0;
   }
