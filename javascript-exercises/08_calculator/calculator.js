@@ -8,17 +8,19 @@ const subtract = function (num1, num2) {
 
 const sum = function (array) {
   let total = 0;
-  for (i = 0; i < array.length; i++) {
-    total += array[i];
-  }
+  array.forEach((num) => {
+    total += num;
+  });
+
   return total;
 };
 
 const multiply = function (array) {
   let total = 1;
-  for (i = 0; i < array.length; i++) {
-    total *= array[i];
-  }
+  array.forEach((num) => {
+    total = total * num;
+  });
+
   return total;
 };
 
@@ -28,9 +30,10 @@ const power = function (num, power) {
 
 const factorial = function (num) {
   let total = 1;
-  for (i = 1; i <= num; i++) {
+  for (let i = 1; i <= num; i++) {
     total *= i;
   }
+
   return total;
 };
 
